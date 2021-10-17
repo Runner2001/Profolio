@@ -1,4 +1,4 @@
-$primary_color : #000000;
+$primary_color : #000;
 $secondary_color : #848484;
 $third_color : #00FFD1;
 $p-color: #e2e2e2;
@@ -14,7 +14,7 @@ $p-color: #e2e2e2;
 }
 
 @mixin tablet {
-    @media screen and (max-width:760px){
+    @media screen and (max-width:810px){
          @content;
     }
 }
