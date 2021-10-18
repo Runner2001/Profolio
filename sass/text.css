@@ -1,0 +1,90 @@
+.text {
+  width: 150px;
+}
+
+h1 {
+  position: relative;
+  color: transparent;
+  -webkit-animation: text1 1s ease-out forwards;
+          animation: text1 1s ease-out forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+h1:nth-child(1) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+h1:nth-child(2) {
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+h1:nth-child(3) {
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+span {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 0%;
+  background: lightblue;
+  -webkit-animation: text 1s ease-out;
+          animation: text 1s ease-out;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+h1:nth-child(1) span {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+h1:nth-child(2) span {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+h1:nth-child(3) span {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+@-webkit-keyframes text {
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+
+@keyframes text {
+  50% {
+    width: 100%;
+    left: 0%;
+  }
+  100% {
+    width: 0%;
+    left: 100%;
+  }
+}
+
+@-webkit-keyframes text1 {
+  100% {
+    color: black;
+  }
+}
+
+@keyframes text1 {
+  100% {
+    color: black;
+  }
+}
+/*# sourceMappingURL=text.css.map */

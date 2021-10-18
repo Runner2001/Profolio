@@ -1,0 +1,50 @@
+button {
+  width: 300px;
+  height: 100px;
+  position: relative;
+  z-index: 1;
+  background: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 100%;
+  width: 0%;
+  height: 100%;
+  background: lightcoral;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+button:hover::before {
+  width: 50%;
+  right: 50%;
+}
+
+button::after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 100%;
+  width: 0%;
+  height: 100%;
+  background: lightblue;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+button:hover::after {
+  width: 50%;
+  left: 50%;
+}
+/*# sourceMappingURL=animation.css.map */

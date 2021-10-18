@@ -1,0 +1,87 @@
+@mixin transition {
+    transition: all 1s ease-in-out;;
+}
+
+@mixin tabelt {
+    @media  screen and (max-width : 810px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media  screen and (max-width : 440px) {
+        @content;
+    }
+}
+
+.container{
+    position: relative;
+    top: 20vh;
+    left: 20vw;
+    width: 60vw;
+    height: 60vh;
+    border: 2px solid lightblue;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+    .project{
+        position: relative;
+        margin:10px;
+        cursor: pointer;
+
+        img{
+            border-radius: 7px;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .text{
+
+            border-radius: 7px 7px 7px 7px;
+            position: absolute;
+            background: rgba($color: lightblue, $alpha: 0.90);
+            width: 100%;
+            top: 100%;
+            height: 0%;
+            left: 0%;
+            right: 0%;
+            overflow: hidden;
+            outline: none;
+            visibility: hidden;
+            @include transition();
+        }
+        .text1{
+            text-align: left;
+            color: black;
+            position: inherit;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%);
+        }
+    }
+.project:hover{
+
+    .text{
+        visibility: visible;
+        top:0%;
+        height: 100%;
+        @include transition();
+    }
+}
+
+@include tabelt(){
+    .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    .text1{
+        font-size: 15px;
+    }
+}
+@include mobile(){
+    .container{
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+    .text1{
+        font-size: 13px;
+    }
+}

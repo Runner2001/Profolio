@@ -1,0 +1,84 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  max-width: 90vw;
+  margin-top: 10px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.service {
+  width: 28vw;
+  height: 200px;
+  margin: 1vw 1vw 1vw 1vw;
+  background-color: white;
+  border-radius: 12px;
+  border-bottom: 5px solid lightblue;
+  -webkit-box-shadow: 1px 2px 5px #e2e2e2;
+          box-shadow: 1px 2px 5px #e2e2e2;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.service-title {
+  color: black;
+  font-weight: 700;
+}
+
+.service-title h2 {
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.service-brief {
+  color: rgba(54, 53, 53, 0.7);
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.service-brief p {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.fas {
+  margin-right: 20px;
+  font-size: 2rem;
+  color: lightblue;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .service {
+    width: 43vw;
+  }
+  .service h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .service {
+    width: 88vw;
+  }
+  .service h2 {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=Service.css.map */

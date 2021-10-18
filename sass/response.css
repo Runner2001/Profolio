@@ -1,0 +1,81 @@
+.container {
+  position: relative;
+  top: 20vh;
+  left: 20vw;
+  width: 60vw;
+  height: 60vh;
+  border: 2px solid lightblue;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.project {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.project img {
+  border-radius: 7px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.project .text {
+  border-radius: 7px 7px 7px 7px;
+  position: absolute;
+  background: rgba(173, 216, 230, 0.9);
+  width: 100%;
+  top: 100%;
+  height: 0%;
+  left: 0%;
+  right: 0%;
+  overflow: hidden;
+  outline: none;
+  visibility: hidden;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.project .text1 {
+  text-align: left;
+  color: black;
+  position: inherit;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.project:hover .text {
+  visibility: visible;
+  top: 0%;
+  height: 100%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 810px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .text1 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    height: 100vh;
+  }
+  .text1 {
+    font-size: 13px;
+  }
+}
+/*# sourceMappingURL=response.css.map */
