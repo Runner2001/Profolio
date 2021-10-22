@@ -1,0 +1,116 @@
+@import 'config';
+
+.about{
+    position: relative;
+    width: 60vw;
+    height: 60vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 7px;
+    border: 1px solid lightblue;
+    box-shadow: 1px 2px 5px #e2e2e2;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: -1;
+
+    .img{
+        background: url('../man-g33b3f5a25_1920.jpg');
+        background-size: cover;
+        width: 90%;
+        height: 90%;
+        border-radius: 7px; 
+        margin-left: 5%;
+    }
+
+    .text{
+        margin: 0px;
+
+        .aboutname{
+            position: absolute;
+            top: 10%;
+            font-size: 32px;
+            width: 240px;
+            box-shadow: inset 0 0 0 0 lightblue;
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+
+            .aboutname:hover{
+                box-shadow: inset 240px 0 0 0 lightblue;
+                span{
+                    transition: all 1s;
+                    color: white;
+                }
+            }
+        }
+        p{
+            font-size: 15px;
+        }
+        ul{
+            padding: 0%;
+            list-style: none;
+            display: flex;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            
+            li{
+                padding: 5px;
+
+                i{
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+span{
+    color: red;
+}
+
+@include mobile{
+    .about{
+        margin: 0;
+        grid-template-columns: 1fr;
+        width: 90vw;
+        height: 80vh;
+
+        justify-content: center;
+        align-items: center;
+
+        .img{
+            background-size: cover;
+            width: 90%;
+            height: 90%;
+        }
+    
+        .text{
+            margin: 10px;
+    
+            .aboutname{
+                position: absolute;
+                top: 40vh;
+                margin-left: 10px;
+            }
+            p{
+                position: absolute;
+                top: 50vh;
+                margin-left: 10px;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                bottom: 0px;
+                right: 5px;
+            }
+        }
+    }
+}

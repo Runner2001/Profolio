@@ -1,0 +1,22 @@
+$primary-color : #e2e2e2;
+$secondary-color : #363535;
+$third-color : lightblue;
+$title-color : black;
+$p-color : $secondary-color;
+
+
+
+@mixin  transition {
+    transition: all 1s ease-in-out;
+}
+
+@mixin mobile {
+    @media screen and (max-width: 440px){
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 900px){
+        @content;
+    }
+}

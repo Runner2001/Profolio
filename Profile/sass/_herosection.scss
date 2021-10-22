@@ -1,0 +1,124 @@
+@import 'config';
+
+.herosection{
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 90vw;
+    height: 80vh;
+    margin: 5vh 5vw;
+    overflow: hidden;
+    background: rgba($color: $primary-color, $alpha: 0.4);
+    border-radius: 12px;
+    // border: 2px solid red;
+
+    .text{
+        margin-left: 10vw;
+        position: relative;
+
+        .name{
+            font-size: 15px;
+            font-weight: 400;
+            color: $secondary-color;
+        }
+        .name1{
+            margin-top: 2px;
+            font-size: 42px;
+            font-weight: 700;
+            color: transparent;
+        }
+        .name2{
+            margin: 10px auto;
+            color: $secondary-color;
+            font-size: 15px;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        ul{
+            //float: right;
+            margin-top: 10px;
+            list-style-type: none;
+            display: flex;
+            li{
+                padding-right: 10px;
+                cursor: pointer;    
+                
+                .fab{
+                    color: $secondary-color;
+                    font-size: 20px;
+                    transition: all 1s ease-in-out;
+                }
+                .fab:hover{
+                    color: $third-color;
+                }
+            }
+        }
+        .callnow{
+            margin: 5px auto;
+        }
+        
+    }
+
+    img{
+        margin-right: 5vw;
+        width: 50vw;
+        height: 400px;
+        border-radius: 17px;
+        background-size: cover;
+    }
+}
+.text1{
+    .name1{
+        position: relative;
+        color: transparent;
+        animation: text 1.5s ease-in-out forwards;
+        animation-delay: 1s;
+    }
+    span{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 0%;
+        height: 100%;
+        background: $third-color;
+        animation: first 1s ease-in-out;
+        animation-delay: 0.5s;
+    }
+}
+
+@keyframes first {
+    50%{width: 100%; left: 0%;}
+    100%{width: 0%; left: 100%;}
+}
+@keyframes text {
+    100%{
+        color: $third-color;
+    }
+}
+
+@include mobile{
+    .herosection{
+        display: grid;
+        grid-template-columns: 1fr;
+        height : 80vh;
+        width: 90vw;
+        margin-top: 10vh;
+
+        .text{
+            margin-top: 3vh;
+            margin-left: 5vw;
+            .name{
+                font-size: 13px;
+            }
+        }
+        img{
+            margin-top: 0px;
+            width: 80vw;
+            height: 40vh;
+            margin-left: 5vw;
+        }
+    }
+
+}

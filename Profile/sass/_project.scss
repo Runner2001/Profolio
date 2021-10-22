@@ -1,28 +1,53 @@
-@mixin transition {
-    transition: all 1s ease-in-out;;
-}
+@import 'config';
 
-@mixin tabelt {
-    @media  screen and (max-width : 810px) {
-        @content;
-    }
-}
-@mixin mobile {
-    @media  screen and (max-width : 440px) {
-        @content;
-    }
-}
-
-.container{
+.pjname{
+    color: white;
+    font-size: 32px;
     position: absolute;
-    top: 20vh;
+    font-weight: 700;
+    top: 10vh;
+    left: 50vw;
+    transform: translate(-50% , -50%);
+}
+#pj{
+    background: url("../3.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.projectcontainer{
+    position: absolute;
+    top: 30vh;
     left: 20vw;
     width: 60vw;
-    height: 60vh;
-    border: 2px solid lightblue;
+    height: 40vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    border: none;
 }
+
+.projectcontainer::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top: 2px solid lightblue;
+    border-left: 2px solid lightblue;
+    width: 5%;
+    height: 20%;
+    @include transition;
+}
+.projectcontainer::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right : 0px;
+    border-bottom: 2px solid lightblue;
+    border-right: 2px solid lightblue;
+    width: 5%;
+    height: 20%;
+    @include transition;
+}
+
     .project{
         position: relative;
         margin:10px;
@@ -35,7 +60,6 @@
             height: 100%;
         }
         .text{
-
             border-radius: 7px 7px 7px 7px;
             position: absolute;
             background: rgba($color: lightblue, $alpha: 0.90);
@@ -66,10 +90,11 @@
         height: 100%;
         @include transition();
     }
+
 }
 
-@include tabelt(){
-    .container{
+@include tablet{
+    .projectcontainer{
         grid-template-columns: 1fr 1fr;
     }
     .text1{
@@ -77,7 +102,11 @@
     }
 }
 @include mobile(){
-    .container{
+    .pjname{
+        visibility: hidden;
+    }
+    .projectcontainer{
+        top: 0vh;
         grid-template-columns: 1fr;
         height: 100vh;
     }

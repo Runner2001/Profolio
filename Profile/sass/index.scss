@@ -1,0 +1,45 @@
+@import 'nav';
+@import 'callnow';
+@import 'herosection';
+@import 'project';
+@import 'aboutme';
+@import 'goodat';   
+@import 'contact';
+
+$primary-color : #e2e2e2;
+$secondary-color : #363535;
+$third-color : lightblue;
+$title-color : black;
+$p-color : $secondary-color;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+body{
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-type: y proximity;
+}
+.first{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

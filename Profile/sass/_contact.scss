@@ -1,0 +1,112 @@
+@import 'config';
+
+.contact{
+    width: 90vw;
+    height: 80vh;
+    border: 1px solid lightblue;
+    position: relative;
+    top: 10vh;
+    left: 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+
+    .contactimg{
+        position: relative;
+        img{
+            width: 500px;
+            height: auto;
+        }
+    }
+
+    .contactway{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 90%;
+        height: 70%;
+        //border: 2px solid red;
+        grid-gap: 15px;
+
+        .box{
+            position: relative;
+            margin: 10px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+            background: rgba($color: lightblue, $alpha: 0.6);
+            box-shadow: 1px 2px 4px #a8a3a3;
+            cursor: pointer;
+            @include transition;
+        
+            i{
+                position: relative;
+            }
+            span{
+                color: rgba($color: #363535, $alpha: 0.8);
+                margin-top: 10px;
+            }
+
+
+        }
+        .box::before{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border-top: 1px solid lightcoral;
+            border-left: 1px solid lightcoral;
+            width: 10%;
+            height: 20%;
+            @include transition;
+        }
+        .box::after{
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            border-bottom: 1px solid lightcoral;
+            border-right: 1px solid lightcoral;
+            width: 10%;
+            height: 20%;
+            @include transition;
+        }
+        .box:hover::before, .box:hover::after{
+            width: 90%;
+            @include transition;
+        }
+        .box:hover{
+            background: rgba($color: #363535, $alpha: 0.6);
+            @include transition;
+            span{
+                color: white;
+            }
+        }
+    }
+}
+
+@include mobile{
+    .contact{
+        width: 100vw;
+        height: 60vh;
+        top: 0%;
+        left: 0%;
+        grid-template-columns: 1fr;
+    }
+    .contactimg{
+        position: absolute;
+        visibility: hidden;
+        img{
+            position: absolute;
+        }
+    }
+    .contactway{
+        position: absolute;
+        margin-left: 5%;
+    }
+    span{
+        font-size: 13px;
+    }
+}

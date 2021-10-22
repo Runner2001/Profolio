@@ -1,0 +1,16 @@
+.callnow{
+    padding: 5px 15px;
+    background: none;
+    outline : none;
+    border : 1px solid $third-color;
+    border-radius: 7px;
+    font-weight: 700;
+    position: relative;
+    box-shadow: inset 0 0 0 0 $third-color;
+    // @include transition;
+    cursor: pointer;
+}
+.callnow:hover{
+    box-shadow: inset 100px 0 0 0 $third-color;
+    // @include transition;
+}

@@ -1,5 +1,5 @@
 .container {
-  position: relative;
+  position: absolute;
   top: 20vh;
   left: 20vw;
   width: 60vw;

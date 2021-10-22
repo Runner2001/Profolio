@@ -18,6 +18,9 @@ body {
   border-radius: 7px;
   -webkit-box-shadow: 1px 2px 5px #e2e2e2;
           box-shadow: 1px 2px 5px #e2e2e2;
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
 }
 
 .container img {
@@ -51,6 +54,30 @@ body {
 
 .container .text ul li i {
   font-size: 22px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 10%;
+  height: 20%;
+  border-top: 2px solid red;
+  border-left: 2px solid red;
+  z-index: 1;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: -8px;
+  width: 10%;
+  height: 20%;
+  border-right: 2px solid red;
+  border-bottom: 2px solid red;
+  z-index: 1;
 }
 
 h2 {

@@ -1,0 +1,66 @@
+@import 'config';
+
+.header{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 2px $primary-color;
+    padding: 10px;
+    
+    h2 span{
+        font-size: 26px;
+        font-weight: 700;
+        color: $third-color;
+        margin-left: 5vw;
+    }
+
+    .nav-bar{
+        display: flex;
+        justify-content: space-between;
+        
+        &-item{
+            color: $secondary-color;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+    }
+
+    .callnow{
+        margin-right: 5vw;  
+    }
+}
+
+@include mobile{
+    .header{
+        position: absolute;
+        flex-direction: column;
+        height: 50vh;
+        visibility: hidden;
+
+        h2 span{
+            margin-left: 0vw;
+            margin-top: 2vh;
+        }
+
+        .nav-bar{
+            flex-direction: column;
+            margin: 10px auto;
+            align-items: center;
+            
+            .nav-bar-item{
+                padding-bottom: 30px;
+            }
+
+        }
+        
+
+        .callnow{
+            margin-right : 0;
+            margin-bottom: 2vh;
+        }
+    }
+
+    
+}
